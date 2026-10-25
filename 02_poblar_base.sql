@@ -55,7 +55,6 @@ INSERT INTO parada (idparada, direccion, idlocalidad) VALUES (35, 'Portal Usme',
 INSERT INTO parada (idparada, direccion, idlocalidad) VALUES (36, 'Parque Principal de Usme', 18);
 INSERT INTO parada (idparada, direccion, idlocalidad) VALUES (37, 'Portal Tunal', 19);
 INSERT INTO parada (idparada, direccion, idlocalidad) VALUES (38, 'Parque Principal de Ciudad Bolívar', 19);
-INSERT INTO estudiante (documentoidentidad, nombre, apellido, universidad, programacursa, correo, telefono) VALUES ('1001001010', 'ADMIN', 'ADMIN', 'ADMIN', 'ADMIN', 'admin@admin.co', '3001010100');
 INSERT INTO estudiante (documentoidentidad, nombre, apellido, universidad, programacursa, correo, telefono) VALUES ('1068695681', 'Laura', 'Castillo Morales', 'Universidad de los Andes', 'Filosofía', 'laura.castillo@uniandes.edu.co', '3043746093');
 INSERT INTO estudiante (documentoidentidad, nombre, apellido, universidad, programacursa, correo, telefono) VALUES ('1098051283', 'Tomás', 'Quintero Salazar', 'Pontificia Universidad Javeriana', 'Microbiología', 'tomas.quintero@javeriana.edu.co', '3219840186');
 INSERT INTO estudiante (documentoidentidad, nombre, apellido, universidad, programacursa, correo, telefono) VALUES ('1010834547', 'Natalia', 'García Ramos', 'Universidad de los Andes', 'Ingeniería de Sistemas y Computación', 'natalia.garcia@uniandes.edu.co', '3047543956');
