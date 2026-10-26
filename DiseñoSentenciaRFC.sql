@@ -4,14 +4,14 @@ INNER JOIN Parada p
 ON s.idparada = p.idparada
 INNER JOIN Localidad l 
 ON p.idlocalidad = l.idlocalidad
-WHERE s.fechasolicitud BETWEEN TO_DATE(:P_FECHA_INICIO, 'DD/MM/YYYY') AND TO_DATE(:P_FECHA_FIN, 'DD/MM/YYYY')
+WHERE s.fechasolicitud BETWEEN TO_DATE(:P_FECHA_INICIO, 'MM/DD/YYYY') AND TO_DATE(:P_FECHA_FIN, 'MM/DD/YYYY')
 GROUP BY  l.nombre
 ORDER BY total_solicitudes DESC;
 
 SELECT l.idlocalidad, l.nombre AS localidad, COUNT(s.idsolicitud) AS solicitudes_aceptadas,COUNT(DISTINCT v.idviaje) AS viajes_completados, NVL(SUM(v.costo), 0) AS ingresos_estimados
 FROM localidad l
 LEFT JOIN viaje v 
-ON v.idlocalidadorigen = l.idlocalidad AND v.estado = 'Completado' AND v.fechasalida >= TRUNC(TO_DATE(:PXX_FECHA_INICIO, 'DD/MM/YYYY')) AND v.fechasalida <= TRUNC(TO_DATE(:PXX_FECHA_FIN, 'DD/MM/YYYY'))
+ON v.idlocalidadorigen = l.idlocalidad AND v.estado = 'Completado' AND v.fechasalida >= TRUNC(TO_DATE(:PXX_FECHA_INICIO, 'MM/DD/YYYY')) AND v.fechasalida <= TRUNC(TO_DATE(:PXX_FECHA_FIN, 'MM/DD/YYYY'))
 LEFT JOIN solicitud s 
 ON s.idviaje = v.idviaje AND s.estado = 'Aceptada'
 GROUP BY l.idlocalidad, l.nombre
